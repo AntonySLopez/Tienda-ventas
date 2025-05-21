@@ -1,27 +1,26 @@
 ---
 import Header from "../components/Header.astro"
 import HeaderCliente from '../components/Items/HeaderCliente.astro'
-import Lateral from '../components/Lateral.astro'
+import Carrito from '../components/Carrito.astro'
 ---
 
 <main class="w-[97%] h-[97%] rounded-2xl grid grid-cols-10 grid-rows-10 bg-[#ffffffb4]">
     <header class="col-start-1 col-end-11 row-start-1 row-end-2 w-full flex justify-between items-center px-4 ">
-        <Header title="Cliente">
+        <Header title="Carrito">
             <HeaderCliente></HeaderCliente>
         </Header>
     </header>
-    <nav class="col-start-1 col-end-11 row-start-2 row-end-3 w-full flex justify-around items-center">
-        <a href="#"><boton>All productos</boton></a>
-        <a href="#"><boton>Buscador</boton></a>
-        <a href="#"><boton>valance</boton></a>
-        <a href="#"><boton>Clientes</boton></a>
-        <a href="#"><boton>Vendedores</boton></a>
-    </nav>
-    <section id="contein" class="col-start-3 col-end-11 row-start-3 row-end-11  grid justify-center grid-cols-[repeat(auto_fit(minmax(250px, 1fr)))] p-3 border">
-        contenido
+
+    <section id="contein" class="col-start-1 col-end-8 row-start-2 row-end-11 grid place-items-center p-3">
+                <Carrito></Carrito>
     </section>
-    <section id="carrito" class="row-start-3 row-end-11 col-start-1 col-end-3 grid border">
-        <Lateral></Lateral>
+    <section id="carrito" class="row-start-2 row-end-11 col-start-8 col-end-11 grid place-items-center">
+        <div class="grid place-items-center">
+            <h2 class="text-[4rem] font-bold">Total</h2>
+            <section class="text-[3rem] font-semibold"><span>S/.</span> 125.00</section>
+            <br>
+            <button class="border text-4xl my-5 p-3 w-[20vh] rounded-2xl bg-amber-300 hover:scale-[1.2]">Pagar</button>
+        </div>
     </section>
 </main>
 

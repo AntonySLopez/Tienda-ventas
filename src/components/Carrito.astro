@@ -1,0 +1,13 @@
+---
+import CarritoItems from "./Items/CarritoItems.astro"
+import {CarItems} from '../api/Carrito'
+
+const items = CarItems();
+
+---
+    <div class="w-full h-[90vh] overflow-y-auto p-2 place-items-center">
+        {items.map( item => 
+            <CarritoItems {...item}></CarritoItems>
+        )}
+
+    </div>

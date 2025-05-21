@@ -1,0 +1,30 @@
+---
+import Header from "../components/Header.astro"
+import HeaderVenta from '../components/Items/HeaderVenta.astro'
+import Carrito from '../components/Carrito.astro'
+---
+
+<main class="w-[97%] h-[97%] rounded-2xl grid grid-cols-10 grid-rows-10 bg-[#ffffffb4]">
+    <header class="col-start-1 col-end-11 row-start-1 row-end-2 w-full flex justify-between items-center px-4 ">
+        <Header title="Vendedor">
+            <HeaderVenta></HeaderVenta>
+        </Header>
+    </header>
+    <nav class="col-start-1 col-end-11 row-start-2 row-end-3 w-full flex justify-around items-center">
+        <button class="text-[2rem] font-semibold border rounded-2xl px-3 cursor-pointer">Venta</button>
+        
+        <button class="text-[2rem] font-semibold border rounded-2xl p-[0px_10px_6px_10px] cursor-pointer bg-green-400">+</button>
+    
+    </nav>
+    <section class="col-start-1 col-end-11 row-start-3 row-end-11 p-3 gap-4 border flex">
+        <div id="contein" class="grid justify-center grid-cols-[repeat(auto_fit(minmax(250px, 1fr)))] w-full h-full border">box</div>
+        <div id="carritoVendedor" class="grid justify-center grid-cols-[repeat(auto_fit(minmax(250px, 1fr)))] w-full h-full border">carrito</div>
+    </section>
+</main>
+
+<style>
+    main{
+        backdrop-filter: blur(20px);
+    }
+    
+</style>

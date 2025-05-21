@@ -1,0 +1,28 @@
+---
+const { foto, name, cantidad } = Astro.props;
+
+const precioUnitario = 12.5;
+const total = (cantidad * precioUnitario).toFixed(2);
+---
+
+<article class="flex justify-between items-center bg-[#white] border-2 border-[#0ca3a8] rounded-xl p-2 shadow-md min-w-[600px] max-w-[900px] w-full font-serif my-3">
+  <img src={foto} alt={`Imagen de ${name}`} class="w-24 h-24 rounded-lg border-2 border-[#159c59] object-cover" />
+    <h2 class="text-lg font-bold text-[#5a3d1c]">{name}</h2>
+
+  <div class="w-[320px] flex gap-2 justify-between border">
+
+    <div class="flex items-center gap-2">
+      <button class="bg-[#d1a075] text-white px-3 py-1 rounded hover:bg-[#b67d50] transition-colors">−</button>
+      <span class="text-base font-semibold text-[#3b2b1b]">{cantidad}</span>
+      <button class="bg-[#d1a075] text-white px-3 py-1 rounded hover:bg-[#b67d50] transition-colors">+</button>
+    </div>
+
+    <p class="text-[#4a351e] text-2xl">Total: ${total}</p>
+  </div>
+</article>
+
+<style>
+  img.object-cover {
+    object-fit: cover;
+  }
+</style>
